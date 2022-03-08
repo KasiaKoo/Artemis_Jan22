@@ -18,3 +18,6 @@ def Andor_calib(pix_no, trans_pos=30000):
 
 def Adams_wedge_thickness(Step, T0 = 0.1, Lead = 0.8, Rev = 200,theta=2.3):
     return 2 * (T0 + (Step * Lead/Rev) * np.tan(np.radians(theta)))
+
+def gaus(x, a, x0, sig):
+    return a*np.exp(-(x-x0)**2/sig**2)
