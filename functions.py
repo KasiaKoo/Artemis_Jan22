@@ -10,7 +10,7 @@ def pos_to_off(position_value, popt = [1.26493902e-02,-1.25115854e+03]):
     return offset_val
 
 def Andor_calib(pix_no, trans_pos=30000):
-    coeff = [-0.0702247191011236,1240/24.8]#[-5.29194209e-02,  56.6780912]
+    coeff = [-0.07732270146188233,1240/(15*1.55)]#[-5.29194209e-02,  56.6780912]
     offset = 1281
     trans_pos_offset = pos_to_off(trans_pos)
     wl = (np.arange(pix_no)+trans_pos_offset-offset) * coeff[0] + coeff[1]
